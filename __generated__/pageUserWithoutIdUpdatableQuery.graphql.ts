@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<7efc7b1835e95539aeaf464d3e9c17fe>>
+ * @generated SignedSource<<2a674d57ebb0ca3e482087c523d00cba>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -9,17 +9,12 @@
 // @ts-nocheck
 
 import { ConcreteUpdatableQuery } from 'relay-runtime';
-import { FragmentRefs } from "relay-runtime";
 export type pageUserWithoutIdUpdatableQuery$variables = Record<PropertyKey, never>;
 export type pageUserWithoutIdUpdatableQuery$data = {
   get userWithoutId(): {
     name: string;
   };
-  set userWithoutId(value: {
-    readonly __typename: "UserWithoutId";
-    readonly __id: string;
-    readonly " $fragmentSpreads": FragmentRefs<"pageUserWithoutId_assignable_UserWithoutId">;
-  } | null | undefined);
+  set userWithoutId(value: null | undefined);
 };
 export type pageUserWithoutIdUpdatableQuery = {
   response: pageUserWithoutIdUpdatableQuery$data;
@@ -47,11 +42,6 @@ const node: ConcreteUpdatableQuery = {
             "kind": "ScalarField",
             "name": "name",
             "storageKey": null
-          },
-          {
-            "args": null,
-            "kind": "FragmentSpread",
-            "name": "pageUserWithoutId_assignable_UserWithoutId"
           }
         ],
         "storageKey": null
@@ -63,6 +53,6 @@ const node: ConcreteUpdatableQuery = {
   "kind": "UpdatableQuery"
 };
 
-(node as any).hash = "907e511f9757f94dacb5584637687158";
+(node as any).hash = "bb5ba57f0aca3636dace05223fb19c12";
 
 export default node;

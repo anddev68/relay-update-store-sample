@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<7e6985470e67b7bc423744fe72a9166d>>
+ * @generated SignedSource<<85cd9723f3afe649f193b25fe1e14532>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -9,14 +9,10 @@
 // @ts-nocheck
 
 import { ConcreteRequest } from 'relay-runtime';
-import { FragmentRefs } from "relay-runtime";
 export type pageUserWithoutIdQuery$variables = Record<PropertyKey, never>;
 export type pageUserWithoutIdQuery$data = {
   readonly userWithoutId: {
-    readonly __typename: "UserWithoutId";
-    readonly __id: string;
     readonly name: string;
-    readonly " $fragmentSpreads": FragmentRefs<"pageUserWithoutId_assignable_UserWithoutId">;
   };
 };
 export type pageUserWithoutIdQuery = {
@@ -25,53 +21,33 @@ export type pageUserWithoutIdQuery = {
 };
 
 const node: ConcreteRequest = (function(){
-var v0 = {
-  "alias": null,
-  "args": null,
-  "kind": "ScalarField",
-  "name": "name",
-  "storageKey": null
-},
-v1 = {
-  "alias": null,
-  "args": null,
-  "kind": "ScalarField",
-  "name": "__typename",
-  "storageKey": null
-};
+var v0 = [
+  {
+    "alias": null,
+    "args": null,
+    "concreteType": "UserWithoutId",
+    "kind": "LinkedField",
+    "name": "userWithoutId",
+    "plural": false,
+    "selections": [
+      {
+        "alias": null,
+        "args": null,
+        "kind": "ScalarField",
+        "name": "name",
+        "storageKey": null
+      }
+    ],
+    "storageKey": null
+  }
+];
 return {
   "fragment": {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
     "name": "pageUserWithoutIdQuery",
-    "selections": [
-      {
-        "alias": null,
-        "args": null,
-        "concreteType": "UserWithoutId",
-        "kind": "LinkedField",
-        "name": "userWithoutId",
-        "plural": false,
-        "selections": [
-          (v0/*: any*/),
-          {
-            "args": null,
-            "kind": "FragmentSpread",
-            "name": "pageUserWithoutId_assignable_UserWithoutId"
-          },
-          (v1/*: any*/),
-          {
-            "alias": null,
-            "args": null,
-            "kind": "ScalarField",
-            "name": "__id",
-            "storageKey": null
-          }
-        ],
-        "storageKey": null
-      }
-    ],
+    "selections": (v0/*: any*/),
     "type": "Query",
     "abstractKey": null
   },
@@ -80,33 +56,19 @@ return {
     "argumentDefinitions": [],
     "kind": "Operation",
     "name": "pageUserWithoutIdQuery",
-    "selections": [
-      {
-        "alias": null,
-        "args": null,
-        "concreteType": "UserWithoutId",
-        "kind": "LinkedField",
-        "name": "userWithoutId",
-        "plural": false,
-        "selections": [
-          (v0/*: any*/),
-          (v1/*: any*/)
-        ],
-        "storageKey": null
-      }
-    ]
+    "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "6037b93e8cd890a93756cbd0e9347a97",
+    "cacheID": "ba7844f7fe46a670eac9e6b01fecc08c",
     "id": null,
     "metadata": {},
     "name": "pageUserWithoutIdQuery",
     "operationKind": "query",
-    "text": "query pageUserWithoutIdQuery {\n  userWithoutId {\n    name\n    ...pageUserWithoutId_assignable_UserWithoutId\n  }\n}\n\nfragment pageUserWithoutId_assignable_UserWithoutId on UserWithoutId {\n  __typename\n}\n"
+    "text": "query pageUserWithoutIdQuery {\n  userWithoutId {\n    name\n  }\n}\n"
   }
 };
 })();
 
-(node as any).hash = "a4e039840e6e712b2fd6401191c87162";
+(node as any).hash = "41211a0ca8bbdab362fb6bae4c01dd88";
 
 export default node;
