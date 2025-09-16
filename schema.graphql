@@ -1,0 +1,22 @@
+type Query {
+  user: User!
+  userWithoutId: UserWithoutId!
+}
+
+type Mutation {
+  updateUser(name: String!): UpdateSettingsPayload!
+  updateUserWithoutId(name: String!): UpdateSettingsPayload!
+}
+
+type User {
+  id: ID!
+  name: String!
+}
+
+type UserWithoutId {
+  name: String!
+}
+
+type UpdateSettingsPayload {
+  query: Query!
+}
