@@ -7,29 +7,18 @@ import { pageUserWithoutIdQuery } from "../../../__generated__/pageUserWithoutId
 import { pageUpdateUserWithoutIdMutation } from "../../../__generated__/pageUpdateUserWithoutIdMutation.graphql";
 import { pageUserWithoutIdUpdatableQuery } from "../../../__generated__/pageUserWithoutIdUpdatableQuery.graphql";
 
-/*
-const assinableFragment = graphql`
-  fragment pageUserWithoutId_assignable_UserWithoutId on UserWithoutId
-  @assignable {
-    __typename
+const query = graphql`
+  query pageUserWithoutIdQuery {
+    userWithoutId {
+      name
+    }
   }
 `;
-*/
 
 const updatableQuery = graphql`
   query pageUserWithoutIdUpdatableQuery @updatable {
     userWithoutId {
       name
-      # ...pageUserWithoutId_assignable_UserWithoutId
-    }
-  }
-`;
-
-const query = graphql`
-  query pageUserWithoutIdQuery {
-    userWithoutId {
-      name
-      # ...pageUserWithoutId_assignable_UserWithoutId
     }
   }
 `;
@@ -40,7 +29,6 @@ const updateUserWithoutIdMutation = graphql`
       query {
         userWithoutId {
           name
-          # ...pageUserWithoutId_assignable_UserWithoutId
         }
       }
     }
